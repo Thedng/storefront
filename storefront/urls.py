@@ -23,6 +23,7 @@ import debug_toolbar
 admin.site.site_header = 'storefront admin' 
 admin.site.index_title = 'admin'
 urlpatterns = [
+    path('',include('core.urls')),
     path('admin/', admin.site.urls),
     path('playground/', include('playground.urls')),
     path('store/', include('store.urls')),
